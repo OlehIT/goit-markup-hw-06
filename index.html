@@ -455,6 +455,18 @@
             </li>
           </ul>
         </div>
+        <div class="subscribe">
+          <p class="subscribe-text">Subscribe</p>
+          <div class="subscribe-buttons">
+            <input class="subscribe-input" type="text" placeholder="E-mail" />
+            <button class="subscribe-button" type="button">
+              <span class="subscribe-span">Subscribe</span>
+              <svg class="subscribe-svg" width="24" height="24">
+                <use href="./images/svg/sprite.svg#icon-send"></use>
+              </svg>
+            </button>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- $$$$$$$$$$$$$$$$$$$$ /FOOTER $$$$$$$$$$$$$$$$$$$$ -->
@@ -468,10 +480,63 @@
             <use href="./images/svg/sprite.svg#icon-close-black"></use>
           </svg>
         </button>
+        <p class="modal-text">Leave your contacts and we will call you back</p>
+        <form class="modal-form">
+          <label class="label-wrap">
+            <span class="input-text">Name</span>
+            <span class="input-wrap">
+              <input class="form-input" name="user-name" type="text" />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/svg/sprite.svg#icon-person"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="label-wrap">
+            <span class="input-text">Phone</span>
+            <span class="input-wrap">
+              <input class="form-input" name="user-phone" type="tel" />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/svg/sprite.svg#icon-phone"></use>
+              </svg>
+            </span>
+          </label>
+          <label class="label-wrap">
+            <span class="input-text">Email</span>
+            <span class="input-wrap">
+              <input class="form-input" name="user-email" type="email" />
+              <svg class="input-icon" width="18" height="24">
+                <use href="./images/svg/sprite.svg#icon-email"></use>
+              </svg>
+            </span>
+          </label>
+          <div class="textarea-wrap">
+            <label class="textarea-text" for="user-text">Comment</label>
+            <textarea
+              class="modal-message"
+              id="user-text"
+              name="user-text"
+              placeholder="Text input"
+            ></textarea>
+          </div>
+          <div class="check-wrap">
+            <input
+              class="agree-check hidden"
+              id="policy"
+              type="checkbox"
+              value="true"
+            />
+            <label class="label-check" for="policy">
+              <span class="policy-text">
+                I accept the terms and conditions of the
+                <a class="policy-link" href="./index.html">Privacy Policy</a>
+              </span>
+            </label>
+          </div>
+          <button class="modal-button-submit" type="submit">Send</button>
+        </form>
       </div>
     </div>
     <script src="./js/modal.js"></script>
-
     <!-- $$$$$$$$$$$$$$$$$$$$ /BACKDROP $$$$$$$$$$$$$$$$$$$$ -->
   </body>
 </html>

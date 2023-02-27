@@ -531,7 +531,7 @@ img {
   margin-bottom: 16px;
 }
 
-.subscribe-buttons {
+.subscribe-form {
   display: flex;
 }
 
@@ -609,6 +609,7 @@ img {
   border-radius: 4px;
   padding: 24px;
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  padding: 72px 24px 24px;
 }
 
 .backdrop.is-hidden .modal {
@@ -618,7 +619,7 @@ img {
 .modal-close-button {
   width: 24px;
   height: 24px;
-  background: #e7e9fc;
+  background-color: #e7e9fc;
   border: 1px solid rgba(0, 0, 0, 0.1);
   border-radius: 50%;
   display: flex;
@@ -627,7 +628,16 @@ img {
   margin-left: auto;
   padding: 0;
   cursor: pointer;
-  margin-bottom: 24px;
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-close-button:is(:hover, :focus) {
+  background-color: #404bbf;
+  fill: #ffffff;
 }
 
 .modal-close-icon {
@@ -681,6 +691,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .input-icon {
@@ -688,6 +699,7 @@ img {
   left: 16px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-input:focus {
@@ -725,6 +737,7 @@ img {
   font-size: 12px;
   line-height: 1.17;
   letter-spacing: 0.04em;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-message:focus {
@@ -749,6 +762,7 @@ img {
   border-radius: 2px;
   cursor: pointer;
   margin-right: 8px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .agree-check:checked + .label-check::before {
